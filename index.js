@@ -36,6 +36,13 @@ $("body").on("keypress", function (){
         started = true;
     }
 })
+$("body").on("click", function (){
+    if(!started){
+        $("h1").text("Level: "+level);
+        nextSequence();
+        started = true;
+    }
+})
 
 function checkAnswer() {
     for(var i=0;i<userClickedPattern.length;i++){
